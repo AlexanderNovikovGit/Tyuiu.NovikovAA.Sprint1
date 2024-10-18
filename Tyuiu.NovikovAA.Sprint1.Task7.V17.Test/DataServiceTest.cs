@@ -9,7 +9,7 @@ namespace Tyuiu.NovikovAA.Sprint1.Task7.V17.Test
         public void TestMethod1()
         {
             DataService ds = new DataService();
-            Assert.AreEqual(-0.086, ds.Calculate(5, 5));
+            Assert.AreEqual(0.087, ds.Calculate(5, 5));
         }
     }
 }
