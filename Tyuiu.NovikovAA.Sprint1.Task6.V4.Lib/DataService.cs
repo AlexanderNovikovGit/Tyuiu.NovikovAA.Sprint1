@@ -18,7 +18,7 @@ namespace Tyuiu.NovikovAA.Sprint1.Task6.V4.Lib
                     answer += " " + world;
                 }
             }
-            answer.Trim();
+            answer = answer.Trim();
             return answer;
         }
     }
