@@ -2,11 +2,13 @@
 
 namespace Tyuiu.NovikovAA.Sprint1.Task5.V1.Lib
 {
-    public class DataService : ISprint1Task1V5
+    public class DataService : ISprint1Task5V1
     {
-        public double Calculate(double x, double y)
+        public int DistanceBetweenDots(double x1, double y1, double x2, double y2)
         {
-            return Convert.ToInt32(Math.Abs(x - y));
+            double distance = Math.Abs(x1 - x2);
+            double height = Math.Abs(y1 - y2);
+            return Convert.ToInt32((Math.Sqrt(Math.Pow(distance, 2) + Math.Pow(height, 2))));
         }
     }
 }
