@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.Design;
 using tyuiu.cources.programming.interfaces.Sprint1;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Tyuiu.NovikovAA.Sprint1.Task6.V4.Lib
 {
@@ -7,14 +8,18 @@ namespace Tyuiu.NovikovAA.Sprint1.Task6.V4.Lib
     {
         public string CheckDoubleN(string value)
         {
-            if (value.Contains("нн"))
+            String[] worlds = value.Split(' ');
+            string answer = string.Empty;
+            foreach (String world in worlds)
             {
-                return value;
+
+                if (world.Contains("нн"))
+                {
+                    answer += " " + world;
+                }
             }
-            else
-            {
-                return "\b";
-            }
+            answer.Trim();
+            return answer;
         }
     }
 }
